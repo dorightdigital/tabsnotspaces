@@ -2,6 +2,10 @@ Tabsnotspaces::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  constraints(:host => /www\..*/) do
+    match "/(*path)" => redirect {|params, req| "http://tabsnotspaces.com#{params[:path]}"},  via: [:get]
+  end
+
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
