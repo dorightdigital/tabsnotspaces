@@ -27,6 +27,12 @@ body {
 		margin: 20px 50px;
 		border-radius: 20px;
 		border: 2px solid black;
+		> img {
+			display: block;
+			margin: auto;
+			border: inherit;
+			border-radius: inherit;
+		}
 	}
 	> footer {
 		font-size: 15px;
