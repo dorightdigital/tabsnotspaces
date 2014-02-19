@@ -3,7 +3,7 @@ Tabsnotspaces::Application.routes.draw do
 	# See how all your routes lay out with "rake routes".
 
 	constraints(:host => /www\..*/) do
-		match "/(*path)" => redirect { |params, req| "http://tabsnotspaces.com#{params[:path]}" }, via: [:get]
+		match "/(*path)" => redirect { |params, req| "http://tabsnotspaces.com/#{params[:path]}" }, via: [:get]
 	end
 
 	# You can have the root of your site routed with "root"
